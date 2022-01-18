@@ -17,6 +17,7 @@ a{
     list-style: none;
     text-decoration: none;
     color: rgb(75, 67, 58) ;
+    cursor: pointer;
 }
 header{
     width: 100%;
