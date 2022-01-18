@@ -1,0 +1,375 @@
+/* -------------- title & nav --------------*/
+html, body, a, header, nav, ul, h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+html{
+    background: url(/img/bg.png) right bottom 6% no-repeat fixed;
+    min-width: 400px;
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+}
+a{
+    list-style: none;
+    text-decoration: none;
+    color: rgb(75, 67, 58) ;
+}
+header{
+    width: 100%;
+    height: 260px;
+    background-image: url("./img/banner.jpg");
+    background-color: rgb(70, 64, 54);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header h1{
+    text-align: right;
+    padding: 148px 70px 30px 0px;
+    color: rgb(36, 36, 36);
+}
+nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(199, 195, 195);
+    position: relative;
+    z-index: 1;
+}
+.navbar ul{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    
+}
+.navbar li{
+    display: inline-block;
+    padding: 12px 6%;
+    font-size: 18px;
+    background-color: rgb(199, 195, 195);
+    transition: all .5s ease-in-out;
+    }
+
+.navbar li:hover{
+    transition: 0.5s;
+    color: #b86800;
+}
+.navbar li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #4e4b47;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navbar li:hover::after{
+    width: 100%;
+}
+.mbtn{
+    display: none;
+    color: #4e4b47;
+    margin: 0 50%;
+}
+.col{
+    margin: auto;
+    text-align: center;
+    justify-content: space-between;
+}
+footer{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-color: rgba(199, 195, 195, .6);
+}
+footer p{
+    padding-top: 15px;
+    font-size: 12px;
+}
+footer a{
+    font-size: 10px;
+    color: rgb(109, 101, 101);
+}
+/*---------畫面小於600px時設定----------*/
+@media (max-width:670px){
+    header h1{
+        font-size: 30px;
+        text-align: center;
+        padding: 148px 0 30px 0;
+    }
+    .navbar a{
+        font-size: 16px;
+        padding: 0px 100px;
+    }
+    .navbar li:nth-of-type(1){
+        margin-top: 50px;
+    }
+    
+        /*以下設定:畫面太小，導覽列收合*/
+        /*導覽列選項不顯示*/
+        .navbar li{
+            display: none;
+        }
+        /*MENU字樣顯示*/
+        .navbar::after{
+            content: 'MENU';
+            position: absolute;
+        }
+        
+        /*滑鼠碰到導覽列時選項顯示*/
+        .navbar:hover li{ 
+            display: block;
+        }
+        
+        /*滑鼠碰到導覽列時MENU字樣消失*/
+        /* .navbar:hover::after{
+            display: none;
+        } */
+        /*導覽列設定結束*/
+        
+        .navbar li:hover::after{
+            width: 40%;
+        }
+        
+    }
+
+
+
+
+/* -------------- pic & index --------------*/
+.s1 {
+    margin: 50px auto;
+    position: relative;
+}
+.s1-col{
+    display: inline-block;
+    position: relative ;
+}
+.s1 img{
+    margin: auto;
+    width: 260px;
+    padding: 15px 15px;
+    border-radius: 50px;
+}
+.gif1::after{
+    content: '流量密碼';
+    font-size: large;
+    color: rgb(51, 40, 28);
+    width: 260px;
+    height: 147px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgb(172, 161, 142);
+    opacity: 0.9;
+    transition: all .6s ease-in-out;
+}
+.gif1:hover::after{
+    content: '';
+    opacity: 0;
+}
+.gif2::after{
+    content: '流量密碼';
+    font-size: large;
+    color: rgb(51, 40, 28);
+    width: 260px;
+    height: 147px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 19px;
+    left: 15px;
+    background-color: rgb(172, 161, 142);
+    opacity: 0.9;
+    transition: all 1.0s ease-in-out;
+}
+.gif2:hover::after{
+    content: '';
+    opacity: 0;
+    transition: all .8s ease;
+}
+@media (max-width:600px){
+    .s1{
+        margin: 5% auto;
+        flex-direction: column;
+    }
+}
+
+
+
+/* -------------- tips --------------*/
+.s2{
+    width:80%;
+    margin: 0 auto;
+    align-items: center;
+    display: block;
+}
+.s2-col{
+    min-width: 200px;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px 0px 30px 0px;
+    text-align: center;
+}
+.s2-ul1{
+    width: 50%;
+    margin: 5px auto;
+    list-style-type: none;
+    border: 3px solid rgb(228, 210, 186);
+    padding: 20px 50px;
+}
+.s2-ul2{
+    padding: 0px;
+}
+.s2-ul2 figure{
+    width: 50%;
+    margin: 20px auto;
+    list-style-type: none;
+    display: block;
+    text-align: center;
+}
+figcaption{
+    background: rgba(65, 49, 17, 0.3);
+}
+.s2-ul2 figure img{
+    width: 100%;
+    list-style-type: none;
+}
+
+.s2 h3{
+    width: 60%;
+    margin: 5px auto;
+}
+.s2 p{
+    width: 60%;
+    margin: 5px auto;
+    text-align: center;
+    color: rgb(78, 57, 25);
+}
+table{
+    width: 200px;
+    height: 120px;
+    margin: 10px auto;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+td{
+    border: 2px solid rgb(153, 137, 112);
+    text-align: center;
+    width: 50px;
+    height: 25px;
+    color: rgb(78, 57, 25);
+    
+}
+.td-none{
+    border: 0;
+}
+table:nth-of-type(2){
+    width: 250px;
+    height: 145px;
+}
+iframe{
+    width: 400px;
+    height: 225px;
+}
+.plus{
+    height: 200px;
+}
+@media (max-width:600px){
+    .s2-ul1 li{
+        font-size: 16px;
+    }
+    .s2 h3{
+        font-size: 20px;
+    }
+    .s2-col{
+        display: block;
+    }
+    iframe{
+        width: 300px;
+        height: 169px;
+    }
+}
+
+
+
+
+
+/* -------------- funTest --------------*/
+.s3-col{
+    width: 400px;
+    min-width: 150px;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 30px 5%;
+    border: 3px solid tan;
+}
+.s3-col div{
+    width: 90px;
+    display: inline-block;
+}
+
+.col h3{
+    min-width: 400px;
+    margin-top: 50px;
+}
+@media (max-width:600px){
+    .s3-col{
+        width: 200px;
+    }
+}
+
+
+/* -------------- about & msg --------------*/
+.s4-col iframe{
+    width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+fieldset{
+    width: 400px;
+    height: 150px;
+    margin: 20px auto 30px auto;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.lb{
+    width: 30%;
+    display: block;
+    text-align: right;
+}
+.ip{
+    width: 50%;
+    display: block;
+    text-align: left;
+}
+label{
+    line-height: 30px;
+}
+input{
+    line-height: 20px;
+    margin-top: 6px;
+}
+@media(max-width:600px){
+    fieldset div{
+        display: block;
+    }
+}
