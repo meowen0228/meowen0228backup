@@ -10,7 +10,7 @@ html{
     min-width: 400px;
 }
 body{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 a{
@@ -21,7 +21,6 @@ a{
 }
 header{
     width: 100%;
-    height: 260px;
     background-image: url("./img/banner.jpg");
     background-color: rgb(70, 64, 54);
     background-position: center;
@@ -203,8 +202,10 @@ footer a{
     transition: all .8s ease;
 }
 @media (max-width:600px){
+    body{
+        width: 100%;
+    }
     .s1{
-        margin: 5% auto;
         flex-direction: column;
     }
 }
@@ -306,7 +307,6 @@ iframe{
         height: 169px;
     }
 }
-
 
 
 
