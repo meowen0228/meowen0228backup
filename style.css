@@ -6,7 +6,7 @@ html, body, a, header, nav, ul, h1, h2, h3, p{
     scroll-behavior: smooth;
 }
 html{
-    background: url(/img/bg.png) right bottom 6% no-repeat fixed;
+    background: url(/img/bg-new-400x400.png) center bottom 6% no-repeat fixed;
     min-width: 400px;
 }
 body{
@@ -341,23 +341,20 @@ iframe{
     text-align: center;
 }
 fieldset{
-    width: 400px;
-    height: 150px;
-    margin: 20px auto 30px auto;
-    padding: 5px 5px;
+    width: 450px;
+    margin: 20px auto;
+    padding: 30px;
     box-sizing: border-box;
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .lb{
-    width: 30%;
     display: block;
     text-align: right;
 }
 .ip{
-    width: 50%;
-    display: block;
     text-align: left;
 }
 label{
