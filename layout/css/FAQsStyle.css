@@ -116,7 +116,6 @@ svg:hover path {
           box-sizing: border-box;
   -webkit-box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.1);
-  position: relative;
 }
 
 .coffeeNavbar .webUserInfo {
@@ -178,10 +177,6 @@ svg:hover path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.coffeeNavbar .coffeeLightBtn {
-  font-weight: 600;
 }
 
 .coffeeNavbar div {
@@ -277,10 +272,11 @@ svg:hover path {
 
 .sideDark {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background: rgba(0, 0, 0, 0.3);
   display: none;
-  position: absolute;
+  position: fixed;
+  top: 0;
   z-index: 1;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -373,6 +369,9 @@ svg:hover path {
     margin-top: 0;
     color: #A37025;
   }
+  .coffeeNavbar .navFirst li:nth-child(n+3):nth-child(-n+7) a:hover {
+    margin-top: 0px;
+  }
   .coffeeNavbar div:nth-child(2) {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -436,19 +435,28 @@ svg:hover path {
   margin-right: 5px;
 }
 
-.coffeeFooter div li {
+.coffeeFooter div {
   margin: 1rem;
+}
+
+.coffeeFooter div li {
+  padding: 0.2rem 0rem;
 }
 
 .coffeeFooter a {
   color: #4C3410;
   text-decoration: none;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
-@media screen and (max-width: 700px) {
+.coffeeFooter a:hover {
+  color: #A37025;
+}
+
+@media screen and (max-width: 800px) {
   .coffeeFooter {
     height: 500px;
-    padding-top: 0rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -459,6 +467,13 @@ svg:hover path {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .coffeeFooter div {
+    margin: .5rem;
+  }
+  .coffeeFooter div li {
+    text-align: center;
+    padding: 0.2rem 0rem;
   }
   .coffeeFooter div:nth-child(2) div {
     -webkit-box-pack: center;
